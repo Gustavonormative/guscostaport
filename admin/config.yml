@@ -1,0 +1,39 @@
+backend:
+  name: turbo-github
+  repo: SEU_USUARIO/SEU_REPOSITORIO
+  branch: main
+  site_id: COLOQUE_O_SITE_ID_DO_DECAP_TURBO_AQUI
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "site"
+    label: "Site"
+    files:
+      - name: "content"
+        label: "Informações do portfólio"
+        file: "content/content.json"
+        fields:
+          - label: "Informações principais"
+            name: "site"
+            widget: "object"
+            fields:
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Cargo", name: "role", widget: "string"}
+              - {label: "Frase principal", name: "lead", widget: "text"}
+              - {label: "Tag", name: "tag", widget: "string"}
+              - {label: "E-mail", name: "email", widget: "string"}
+              - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
+              - {label: "Instagram", name: "instagram", widget: "string", required: false}
+          - label: "Cases"
+            name: "cases"
+            widget: "list"
+            fields:
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Capa / imagem", name: "image", widget: "image", required: false}
+              - {label: "Desafio", name: "challenge", widget: "text"}
+              - {label: "Ideia", name: "idea", widget: "text"}
+              - {label: "Atuação", name: "work", widget: "text"}
+              - {label: "O que demonstra", name: "proof", widget: "text"}
+              - {label: "Link do material", name: "link", widget: "string", required: false}

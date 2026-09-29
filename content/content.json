@@ -1,0 +1,58 @@
+{
+  "site": {
+    "name": "Gustavo Costa",
+    "role": "Creative Content Strategist & Producer",
+    "lead": "Estratégia, criatividade e conteúdo conectados à cultura.",
+    "tag": "Ideias em movimento ↘",
+    "email": "seuemail@exemplo.com",
+    "linkedin": "https://www.linkedin.com/",
+    "instagram": "https://www.instagram.com/"
+  },
+  "cases": [
+    {
+      "title": "Barba Bielo — Mês da Diversidade",
+      "challenge": "Criar uma estratégia de conteúdo para o Mês da Diversidade, conectando a pauta à influenciadora e a uma produção dedicada.",
+      "idea": "Vídeos com conceito, cenários, looks e roteiros pensados para a captação.",
+      "work": "Planejamento, orçamento e contratação de produtora, cenários, looks, roteiros, apoio nas captações e acompanhamento da edição.",
+      "proof": "Planejamento, influência e produção integrados.",
+      "link": "https://www.instagram.com/p/Cer4dF3oCi-/",
+      "image": ""
+    },
+    {
+      "title": "Google Search",
+      "challenge": "Tornar o Google Brasil mais presente nas redes e aproximar a marca da linguagem cotidiana.",
+      "idea": "Uma personalidade social mais humana, com memes e humor conectados à experiência do produto.",
+      "work": "Estratégia, pacote semanal de memes, captação, edição e análise de conteúdo.",
+      "proof": "Social-first, cultura digital e tradução de produto em conteúdo.",
+      "link": "https://www.instagram.com/p/C5Z1v32ITB5/",
+      "image": ""
+    },
+    {
+      "title": "Pluto TV — CCXP",
+      "challenge": "Planejar e executar uma cobertura social conectada ao ritmo e às conversas do evento.",
+      "idea": "Cobertura estratégica e tática, com conteúdos roteirizados e execução ágil.",
+      "work": "Planejamento, roteiros, captação, edição, publicação e interação com a comunidade.",
+      "proof": "Visão ponta a ponta e operação em tempo real.",
+      "link": "https://www.instagram.com/p/DR7ad7hAOv7/",
+      "image": ""
+    },
+    {
+      "title": "Pluto TV — Persona no X",
+      "challenge": "Encontrar uma forma própria de participar de conversas relevantes no X.",
+      "idea": "Uma persona loira e poderosa, presente em assuntos do momento e conversas com outras marcas.",
+      "work": "Construção da persona, plano tático, criação, redação e monitoramento de redes.",
+      "proof": "Voz de marca, timing cultural e conversas orgânicas.",
+      "link": "https://x.com/poptime/status/1942638956987965627?s=20",
+      "image": ""
+    },
+    {
+      "title": "Paramount+",
+      "challenge": "Aproximar filmes e séries da linguagem e dos códigos de humor da internet.",
+      "idea": "Traduzir títulos e universos de entretenimento para uma linguagem mais memética.",
+      "work": "Desenvolvimento de persona e planejamento tático de conteúdo.",
+      "proof": "Repertório de cultura pop e adaptação de entretenimento para formatos sociais.",
+      "link": "https://www.instagram.com/p/DbQ_jiMoMfs/",
+      "image": ""
+    }
+  ]
+}
