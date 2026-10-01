@@ -102,91 +102,89 @@ footer{border-top:var(--border);padding:20px 0;color:var(--muted);font-size:.75r
  .intro,.item,.contact,.areas,.cases,.process{grid-template-columns:1fr}.intro{gap:40px}.hero-stamp{aspect-ratio:16/9}.page{padding-top:48px}.heading{align-items:flex-start}.heading h2{max-width:75%}.foot{flex-direction:column}.step{min-height:0}.case .placeholder{min-height:170px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+#gc-editor{position:fixed;right:18px;bottom:18px;z-index:99999;display:flex;gap:8px;flex-wrap:wrap}
+#gc-editor button{border:2px solid #201e1d;background:#201e1d;color:#f4f0e6;padding:10px 13px;font-weight:900;cursor:pointer;box-shadow:4px 4px 0 #741f36}
+#gc-editor .save{background:#737747}.gc-cancel{background:#741f36!important}
+body.gc-editing [data-editable]{outline:2px dashed var(--accent);outline-offset:4px;cursor:text}
+#gc-panel{position:fixed;right:18px;bottom:75px;z-index:99998;width:min(360px,calc(100vw - 36px));background:var(--paper);color:var(--ink);border:2px solid var(--ink);box-shadow:7px 7px 0 var(--ink);padding:18px;display:none}
+body.gc-editing #gc-panel{display:block}
+#gc-panel h3{font-size:22px;margin-bottom:12px}
+.gc-color{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;margin:9px 0}
+.gc-color label{font:900 12px Arial;text-transform:uppercase}
+.gc-color input{width:54px;height:34px;padding:0;border:2px solid var(--ink)}
+#gc-hint{font:12px/1.4 Arial;margin-top:12px;color:var(--ink)}
 </style>
 </head>
 <body>
 <header><div class="shell topbar"><a class="wordmark" href="#sobre" data-page="sobre">GUSTAVO COSTA®</a><nav class="nav" aria-label="Navegação principal"><button data-page="sobre" aria-current="page">01 Sobre</button><button data-page="trajetoria">02 Trajetória</button><button data-page="atuacao">03 Atuação</button><button data-page="cases">04 Cases</button></nav></div></header>
 <main class="shell">
 <section class="page active" id="sobre">
- <div class="intro"><div><div class="eyebrow kicker">Portfólio independente · 2026</div><h1 id="site-name">Gustavo<br>Costa<span style="color:var(--accent)">.</span></h1><p class="role" id="site-role">Creative Content Strategist<br>&amp; Producer</p><p class="lead" id="site-lead">Estratégia, criatividade e conteúdo conectados à cultura.</p><span class="hero-tag" id="site-tag">Ideias em movimento ↘</span></div><div class="hero-stamp"><div class="stamp-small">Estratégia / Criação / Produção</div><div class="stamp-big">GC<br>®</div><div class="stamp-small">Portfólio 2026<br>São Paulo · Brasil</div></div></div>
- <div class="block reveal"><div class="heading"><h2>Quem<br>sou.</h2><span class="index">01 / Apresentação</span></div><div class="copy"><p>Sou Gustavo Costa, profissional de comunicação e criatividade com uma trajetória construída em diferentes frentes da publicidade. Já estive do lado do atendimento, da influência, da criação e da gestão de redes sociais.</p><p>Essa experiência me permite olhar para o conteúdo de forma ampla: entender o desafio da marca, encontrar o caminho criativo e transformar ideias em entregas que fazem sentido para as pessoas.</p><p>Hoje, atuo conectando estratégia, repertório cultural e produção de conteúdo, transitando entre o planejamento e a execução para transformar conversas, comportamentos e referências em oportunidades para as marcas.</p></div></div>
- <div class="block reveal"><div class="heading"><h2>O que me<br>move.</h2><span class="index">Manifesto</span></div><div class="copy"><p>Acredito em conteúdos que entendem a conversa antes de tentar fazer parte dela. Me interessa observar como as pessoas se comportam, o que consomem, o que compartilham e quais assuntos movimentam a internet.</p><p>É desse encontro entre cultura, comportamento e objetivos de marca que surgem oportunidades criativas. Gosto de transformar referências em ideias, ideias em conteúdo e conteúdo em conversas reais.</p><p>Porque, para mim, criar não é apenas produzir algo para uma plataforma. É encontrar a maneira certa de fazer uma marca participar da vida das pessoas.</p></div></div>
- <div class="block reveal" id="contato"><div class="heading"><h2>Fale<br>comigo.</h2><span class="index">Contato</span></div><div class="contact"><a id="email-link" href="mailto:seuemail@exemplo.com"><span>E-mail ↗</span><span id="email-text">seuemail@exemplo.com</span></a><a id="linkedin-link" href="#" target="_blank" rel="noreferrer"><span>LinkedIn ↗</span>Adicionar link</a><a id="instagram-link" href="#" target="_blank" rel="noreferrer"><span>Instagram ↗</span>Adicionar link</a></div></div>
+ <div class="intro"><div><div class="eyebrow kicker">Portfólio independente · 2026</div><h1 data-editable>Gustavo<br>Costa<span style="color:var(--accent)">.</span></h1><p class="role" data-editable>Creative Content Strategist<br>&amp; Producer</p><p class="lead" data-editable>Estratégia, criatividade e conteúdo conectados à cultura.</p><span class="hero-tag">Ideias em movimento ↘</span></div><div class="hero-stamp"><div class="stamp-small">Estratégia / Criação / Produção</div><div class="stamp-big">GC<br>®</div><div class="stamp-small">Portfólio 2026<br>São Paulo · Brasil</div></div></div>
+ <div class="block reveal"><div class="heading"><h2 data-editable>Quem<br>sou.</h2><span class="index">01 / Apresentação</span></div><div class="copy"><p data-editable>Sou Gustavo Costa, profissional de comunicação e criatividade com uma trajetória construída em diferentes frentes da publicidade. Já estive do lado do atendimento, da influência, da criação e da gestão de redes sociais.</p><p data-editable>Essa experiência me permite olhar para o conteúdo de forma ampla: entender o desafio da marca, encontrar o caminho criativo e transformar ideias em entregas que fazem sentido para as pessoas.</p><p data-editable>Hoje, atuo conectando estratégia, repertório cultural e produção de conteúdo, transitando entre o planejamento e a execução para transformar conversas, comportamentos e referências em oportunidades para as marcas.</p></div></div>
+ <div class="block reveal"><div class="heading"><h2 data-editable>O que me<br>move.</h2><span class="index">Manifesto</span></div><div class="copy"><p data-editable>Acredito em conteúdos que entendem a conversa antes de tentar fazer parte dela. Me interessa observar como as pessoas se comportam, o que consomem, o que compartilham e quais assuntos movimentam a internet.</p><p data-editable>É desse encontro entre cultura, comportamento e objetivos de marca que surgem oportunidades criativas. Gosto de transformar referências em ideias, ideias em conteúdo e conteúdo em conversas reais.</p><p data-editable>Porque, para mim, criar não é apenas produzir algo para uma plataforma. É encontrar a maneira certa de fazer uma marca participar da vida das pessoas.</p></div></div>
+ <div class="block reveal" id="contato"><div class="heading"><h2 data-editable>Fale<br>comigo.</h2><span class="index">Contato</span></div><div class="contact"><a href="mailto:seuemail@exemplo.com"><span>E-mail ↗</span>seuemail@exemplo.com</a><a href="#" target="_blank" rel="noreferrer"><span>LinkedIn ↗</span>Adicionar link</a><a href="#" target="_blank" rel="noreferrer"><span>Instagram ↗</span>Adicionar link</a></div></div>
 </section>
-<section class="page" id="trajetoria"><div class="eyebrow kicker">Capítulo 02</div><div class="block"><h2>Uma coisa<br>levou à outra.</h2><p class="lead">Uma carreira construída entre atendimento, influência, criação, conteúdo e comunidade.</p></div><div class="timeline block">
-<div class="item reveal"><strong>2019–2022<br>Estagiário e Assistente de Atendimento</strong><p>Contas: Olympikus, Nestlé, Coca-Cola e Avon. Aprendizado sobre marcas, clientes, processos e trabalho integrado entre áreas.</p></div>
-<div class="item reveal"><strong>2022<br>Assessor de Influência</strong><p>Conexão entre marcas e criadores, com olhar para conteúdo, talentos e construção de conversas.</p></div>
-<div class="item reveal"><strong>2022–2023<br>Executivo de Contas</strong><p>Gestão de demandas, alinhamentos e entregas, conectando necessidades do cliente às equipes.</p></div>
-<div class="item reveal"><strong>2023–2025<br>Creator e Influenciador</strong><p>Criação de conteúdo na prática, repertório de plataformas e compreensão da relação entre criadores e audiência.</p></div>
-<div class="item reveal"><strong>2025–2026<br>Community Manager</strong><p>Gestão de comunidade, linguagem de marca, conversas em tempo real e identificação de oportunidades culturais.</p></div>
-<div class="item reveal"><strong>2026–atual<br>Creative Content Strategist &amp; Producer</strong><p>Integração entre estratégia, planejamento, criação e produção de conteúdo.</p></div></div></section>
-<section class="page" id="atuacao"><div class="eyebrow kicker">Capítulo 03</div><div class="block"><h2>O que<br>eu faço.</h2><p class="lead">Da leitura do desafio à entrega: diferentes frentes conectadas por uma visão integrada de conteúdo.</p></div><div class="areas block">
-<article class="area reveal"><div class="num">01 / DISCIPLINA</div><h3>Estratégia &amp;<br>Planejamento</h3><p>Transformar objetivos de marca em caminhos de conteúdo, conectando desafios de negócio, comportamento e oportunidades culturais.</p></article>
-<article class="area reveal"><div class="num">02 / DISCIPLINA</div><h3>Criação &amp;<br>Roteiro</h3><p>Desenvolver ideias, narrativas e formatos conectados à linguagem das plataformas e aos interesses das pessoas.</p></article>
-<article class="area reveal"><div class="num">03 / DISCIPLINA</div><h3>Produção de<br>Conteúdo</h3><p>Levar ideias da preparação à execução, conectando roteiro, captação, edição e entrega.</p></article>
-<article class="area reveal"><div class="num">04 / DISCIPLINA</div><h3>Social &amp;<br>Comunidade</h3><p>Acompanhar conversas, identificar oportunidades e aproximar marcas das pessoas por meio de conteúdo e interação.</p></article></div>
-<div class="block"><div class="heading"><h2>Meu processo.</h2><span class="index">05 etapas</span></div><div class="process">
-<article class="step reveal"><div class="num">01</div><h3>Entender</h3><p>Investigar o desafio, os objetivos da marca, o público e o contexto.</p></article><article class="step reveal"><div class="num">02</div><h3>Encontrar</h3><p>Mapear referências, comportamentos e conversas que abrem caminhos criativos.</p></article><article class="step reveal"><div class="num">03</div><h3>Planejar</h3><p>Transformar o direcionamento em estratégia, formatos, prioridades e plano de conteúdo.</p></article><article class="step reveal"><div class="num">04</div><h3>Produzir</h3><p>Levar a ideia à prática, conectando roteiro, captação, edição e publicação.</p></article><article class="step reveal"><div class="num">05</div><h3>Acompanhar</h3><p>Observar a resposta das pessoas, aprender com os sinais e identificar novas oportunidades.</p></article></div></div><div class="block"><p class="closing">Ideias que encontram<br>seu jeito de acontecer.</p></div></section>
-<section class="page" id="cases"><div class="eyebrow kicker">Capítulo 04</div><div class="block"><h2>Trabalho<br>em campo.</h2><p class="lead">Projetos que conectam estratégia, cultura, criação e execução.</p></div><div class="cases block" id="cases-grid"></div></section>
+<section class="page" id="trajetoria"><div class="eyebrow kicker">Capítulo 02</div><div class="block"><h2 data-editable>Uma coisa<br>levou à outra.</h2><p class="lead" data-editable>Uma carreira construída entre atendimento, influência, criação, conteúdo e comunidade.</p></div><div class="timeline block">
+<div class="item reveal"><strong data-editable>2019–2022<br>Estagiário e Assistente de Atendimento</strong><p data-editable>Contas: Olympikus, Nestlé, Coca-Cola e Avon. Aprendizado sobre marcas, clientes, processos e trabalho integrado entre áreas.</p></div>
+<div class="item reveal"><strong data-editable>2022<br>Assessor de Influência</strong><p data-editable>Conexão entre marcas e criadores, com olhar para conteúdo, talentos e construção de conversas.</p></div>
+<div class="item reveal"><strong data-editable>2022–2023<br>Executivo de Contas</strong><p data-editable>Gestão de demandas, alinhamentos e entregas, conectando necessidades do cliente às equipes.</p></div>
+<div class="item reveal"><strong data-editable>2023–2025<br>Creator e Influenciador</strong><p data-editable>Criação de conteúdo na prática, repertório de plataformas e compreensão da relação entre criadores e audiência.</p></div>
+<div class="item reveal"><strong data-editable>2025–2026<br>Community Manager</strong><p data-editable>Gestão de comunidade, linguagem de marca, conversas em tempo real e identificação de oportunidades culturais.</p></div>
+<div class="item reveal"><strong data-editable>2026–atual<br>Creative Content Strategist &amp; Producer</strong><p data-editable>Integração entre estratégia, planejamento, criação e produção de conteúdo.</p></div></div></section>
+<section class="page" id="atuacao"><div class="eyebrow kicker">Capítulo 03</div><div class="block"><h2 data-editable>O que<br>eu faço.</h2><p class="lead" data-editable>Da leitura do desafio à entrega: diferentes frentes conectadas por uma visão integrada de conteúdo.</p></div><div class="areas block">
+<article class="area reveal"><div class="num">01 / DISCIPLINA</div><h3 data-editable>Estratégia &amp;<br>Planejamento</h3><p data-editable>Transformar objetivos de marca em caminhos de conteúdo, conectando desafios de negócio, comportamento e oportunidades culturais.</p></article>
+<article class="area reveal"><div class="num">02 / DISCIPLINA</div><h3 data-editable>Criação &amp;<br>Roteiro</h3><p data-editable>Desenvolver ideias, narrativas e formatos conectados à linguagem das plataformas e aos interesses das pessoas.</p></article>
+<article class="area reveal"><div class="num">03 / DISCIPLINA</div><h3 data-editable>Produção de<br>Conteúdo</h3><p data-editable>Levar ideias da preparação à execução, conectando roteiro, captação, edição e entrega.</p></article>
+<article class="area reveal"><div class="num">04 / DISCIPLINA</div><h3 data-editable>Social &amp;<br>Comunidade</h3><p data-editable>Acompanhar conversas, identificar oportunidades e aproximar marcas das pessoas por meio de conteúdo e interação.</p></article></div>
+<div class="block"><div class="heading"><h2 data-editable>Meu processo.</h2><span class="index">05 etapas</span></div><div class="process">
+<article class="step reveal"><div class="num">01</div><h3 data-editable>Entender</h3><p data-editable>Investigar o desafio, os objetivos da marca, o público e o contexto.</p></article><article class="step reveal"><div class="num">02</div><h3 data-editable>Encontrar</h3><p data-editable>Mapear referências, comportamentos e conversas que abrem caminhos criativos.</p></article><article class="step reveal"><div class="num">03</div><h3 data-editable>Planejar</h3><p data-editable>Transformar o direcionamento em estratégia, formatos, prioridades e plano de conteúdo.</p></article><article class="step reveal"><div class="num">04</div><h3 data-editable>Produzir</h3><p data-editable>Levar a ideia à prática, conectando roteiro, captação, edição e publicação.</p></article><article class="step reveal"><div class="num">05</div><h3 data-editable>Acompanhar</h3><p data-editable>Observar a resposta das pessoas, aprender com os sinais e identificar novas oportunidades.</p></article></div></div><div class="block"><p class="closing" data-editable>Ideias que encontram<br>seu jeito de acontecer.</p></div></section>
+<section class="page" id="cases"><div class="eyebrow kicker">Capítulo 04</div><div class="block"><h2 data-editable>Trabalho<br>em campo.</h2><p class="lead" data-editable>Projetos que conectam estratégia, cultura, criação e execução.</p></div><div class="cases block">
+<article class="case reveal"><div class="placeholder">Inserir capa / imagem / vídeo</div><div class="case-body"><div class="num">CASE 01</div><h3 data-editable>Barba Bielo — Mês da Diversidade</h3><dl><dt>Desafio</dt><dd>Criar uma estratégia de conteúdo para o Mês da Diversidade, conectando a pauta à influenciadora e a uma produção dedicada.</dd><dt>Ideia</dt><dd>Vídeos com conceito, cenários, looks e roteiros pensados para a captação.</dd><dt>Atuação</dt><dd>Planejamento, orçamento e contratação de produtora, cenários, looks, roteiros, apoio nas captações e acompanhamento da edição.</dd><dt>O que demonstra</dt><dd>Planejamento, influência e produção integrados.</dd></dl><a class="case-link" href="https://www.instagram.com/p/Cer4dF3oCi-/" target="_blank" rel="noreferrer">Ver material ↗</a></div></article>
+<article class="case reveal"><div class="placeholder">Inserir capa / imagem / vídeo</div><div class="case-body"><div class="num">CASE 02</div><h3 data-editable>Google Search</h3><dl><dt>Desafio</dt><dd>Tornar o Google Brasil mais presente nas redes e aproximar a marca da linguagem cotidiana.</dd><dt>Ideia</dt><dd>Uma personalidade social mais humana, com memes e humor conectados à experiência do produto.</dd><dt>Atuação</dt><dd>Estratégia, pacote semanal de memes, captação, edição e análise de conteúdo.</dd><dt>O que demonstra</dt><dd>Social-first, cultura digital e tradução de produto em conteúdo.</dd></dl><a class="case-link" href="https://www.instagram.com/p/C5Z1v32ITB5/" target="_blank" rel="noreferrer">Ver material ↗</a></div></article>
+<article class="case reveal"><div class="placeholder">Inserir capa / imagem / vídeo</div><div class="case-body"><div class="num">CASE 03</div><h3 data-editable>Pluto TV — CCXP</h3><dl><dt>Desafio</dt><dd>Planejar e executar uma cobertura social conectada ao ritmo e às conversas do evento.</dd><dt>Ideia</dt><dd>Cobertura estratégica e tática, com conteúdos roteirizados e execução ágil.</dd><dt>Atuação</dt><dd>Planejamento, roteiros, captação, edição, publicação e interação com a comunidade.</dd><dt>O que demonstra</dt><dd>Visão ponta a ponta e operação em tempo real.</dd></dl><a class="case-link" href="https://www.instagram.com/p/DR7ad7hAOv7/" target="_blank" rel="noreferrer">Ver material ↗</a></div></article>
+<article class="case reveal"><div class="placeholder">Inserir capa / imagem / vídeo</div><div class="case-body"><div class="num">CASE 04</div><h3 data-editable>Pluto TV — Persona no X</h3><dl><dt>Desafio</dt><dd>Encontrar uma forma própria de participar de conversas relevantes no X.</dd><dt>Ideia</dt><dd>Uma persona loira e poderosa, presente em assuntos do momento e conversas com outras marcas.</dd><dt>Atuação</dt><dd>Construção da persona, plano tático, criação, redação e monitoramento de redes.</dd><dt>O que demonstra</dt><dd>Voz de marca, timing cultural e conversas orgânicas.</dd></dl><a class="case-link" href="https://x.com/poptime/status/1942638956987965627?s=20" target="_blank" rel="noreferrer">Ver material ↗</a></div></article>
+<article class="case reveal"><div class="placeholder">Inserir capa / imagem / vídeo</div><div class="case-body"><div class="num">CASE 05</div><h3 data-editable>Paramount+</h3><dl><dt>Desafio</dt><dd>Aproximar filmes e séries da linguagem e dos códigos de humor da internet.</dd><dt>Ideia</dt><dd>Traduzir títulos e universos de entretenimento para uma linguagem mais memética.</dd><dt>Atuação</dt><dd>Desenvolvimento de persona e planejamento tático de conteúdo.</dd><dt>O que demonstra</dt><dd>Repertório de cultura pop e adaptação de entretenimento para formatos sociais.</dd></dl><a class="case-link" href="https://www.instagram.com/p/DbQ_jiMoMfs/" target="_blank" rel="noreferrer">Ver material ↗</a></div></article>
+</div></section>
 </main><div class="marquee" aria-hidden="true"><span>ESTRATÉGIA ✳ CRIAÇÃO ✳ PRODUÇÃO ✳ CULTURA DIGITAL ✳ SOCIAL FIRST ✳ ESTRATÉGIA ✳ CRIAÇÃO ✳ PRODUÇÃO ✳ CULTURA DIGITAL ✳ SOCIAL FIRST ✳ </span></div>
 <footer><div class="shell foot"><span>Gustavo Costa® · Creative Content Strategist &amp; Producer</span><span>Portfólio · 2026</span></div></footer>
 <script>
 const buttons=document.querySelectorAll('[data-page]'),pages=document.querySelectorAll('.page');
+function revealItems(){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.page.active .reveal').forEach(el=>observer.observe(el))}
+function showPage(id){if(!document.getElementById(id)?.classList.contains('page'))return;pages.forEach(p=>p.classList.toggle('active',p.id===id));buttons.forEach(b=>b.dataset.page===id?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));history.replaceState(null,'','#'+id);window.scrollTo({top:0,behavior:'smooth'});revealItems()}
+buttons.forEach(b=>b.addEventListener('click',e=>{e.preventDefault();showPage(b.dataset.page)}));const initial=location.hash.slice(1);if(initial)showPage(initial);else revealItems();
+</script>
 
-function revealItems(){
-  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
-    if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
-  }),{threshold:.12});
-  document.querySelectorAll('.page.active .reveal').forEach(el=>observer.observe(el));
-}
-function showPage(id){
-  if(!document.getElementById(id)?.classList.contains('page'))return;
-  pages.forEach(p=>p.classList.toggle('active',p.id===id));
-  buttons.forEach(b=>b.dataset.page===id?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
-  history.replaceState(null,'','#'+id); window.scrollTo({top:0,behavior:'smooth'}); revealItems();
-}
-buttons.forEach(b=>b.addEventListener('click',e=>{e.preventDefault();showPage(b.dataset.page)}));
-
-function renderCases(cases){
-  const grid=document.getElementById('cases-grid');
-  if(!grid) return;
-  grid.innerHTML=cases.map((c,i)=>`
-    <article class="case reveal">
-      <div class="placeholder">${c.image ? `<img src="${escapeAttr(c.image)}" alt="${escapeAttr(c.title)}" style="width:100%;height:200px;object-fit:cover;display:block">` : 'Inserir capa / imagem / vídeo'}</div>
-      <div class="case-body">
-        <div class="num">CASE ${String(i+1).padStart(2,'0')}</div>
-        <h3>${escapeHtml(c.title)}</h3>
-        <dl>
-          <dt>Desafio</dt><dd>${escapeHtml(c.challenge)}</dd>
-          <dt>Ideia</dt><dd>${escapeHtml(c.idea)}</dd>
-          <dt>Atuação</dt><dd>${escapeHtml(c.work)}</dd>
-          <dt>O que demonstra</dt><dd>${escapeHtml(c.proof)}</dd>
-        </dl>
-        ${c.link ? `<a class="case-link" href="${escapeAttr(c.link)}" target="_blank" rel="noreferrer">Ver material ↗</a>` : ''}
-      </div>
-    </article>`).join('');
-}
-function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
-function escapeAttr(v){return escapeHtml(v);}
-
-async function loadContent(){
-  try{
-    const r=await fetch('content/content.json', {cache:'no-store'});
-    if(!r.ok) throw new Error('content.json não encontrado');
-    const d=await r.json();
-    const nameParts=String(d.site.name||'Gustavo Costa').split(' ');
-    document.getElementById('site-name').innerHTML=escapeHtml(nameParts[0])+'<br>'+escapeHtml(nameParts.slice(1).join(' '))+'<span style="color:var(--accent)">.</span>';
-    document.getElementById('site-role').innerHTML=escapeHtml(d.site.role||'').replace(' &amp; ','<br>&amp; ');
-    document.getElementById('site-lead').textContent=d.site.lead||'';
-    document.getElementById('site-tag').textContent=d.site.tag||'';
-    document.getElementById('email-text').textContent=d.site.email||'';
-    document.getElementById('email-link').href='mailto:'+(d.site.email||'');
-    document.getElementById('linkedin-link').href=d.site.linkedin||'#';
-    document.getElementById('instagram-link').href=d.site.instagram||'#';
-    renderCases(d.cases||[]);
-  }catch(e){console.warn('Conteúdo editável não carregado:',e);}
-  const initial=location.hash.slice(1); if(initial)showPage(initial); else revealItems();
-}
-loadContent();
+<div id="gc-panel">
+<h3>EDITOR VISUAL</h3>
+<div class="gc-color"><label>Fundo</label><input id="gc-paper" type="color" value="#e7e3d9"></div>
+<div class="gc-color"><label>Texto</label><input id="gc-ink" type="color" value="#201e1d"></div>
+<div class="gc-color"><label>Destaque</label><input id="gc-accent" type="color" value="#741f36"></div>
+<div class="gc-color"><label>Oliva</label><input id="gc-olive" type="color" value="#737747"></div>
+<div id="gc-hint">Clique nos textos destacados para editar. Use os controles para alterar as cores.</div>
+</div>
+<div id="gc-editor">
+<button id="gc-edit">✎ EDITAR SITE</button>
+<button id="gc-save" class="save" style="display:none">✓ SALVAR</button>
+<button id="gc-download" style="display:none">↓ BAIXAR HTML</button>
+<button id="gc-cancel" class="gc-cancel" style="display:none">CANCELAR</button>
+</div>
+<script>
+(()=> {
+const K='gc-editor-v3', els=[...document.querySelectorAll('[data-editable]')];
+const b={edit:document.getElementById('gc-edit'),save:document.getElementById('gc-save'),down:document.getElementById('gc-download'),cancel:document.getElementById('gc-cancel')};
+const c={paper:document.getElementById('gc-paper'),ink:document.getElementById('gc-ink'),accent:document.getElementById('gc-accent'),olive:document.getElementById('gc-olive')};
+const original=els.map(e=>e.innerHTML), originalC=Object.fromEntries(Object.entries(c).map(([k,v])=>[k,v.value]));
+function colors(){Object.entries(c).forEach(([k,v])=>document.documentElement.style.setProperty('--'+k,v.value))}
+Object.values(c).forEach(x=>x.oninput=colors);
+function snap(){return{text:els.map((e,i)=>[i,e.innerHTML]),colors:Object.fromEntries(Object.entries(c).map(([k,v])=>[k,v.value]))}}
+function restore(d){(d?.text||[]).forEach(([i,v])=>els[i]&&(els[i].innerHTML=v));if(d?.colors)Object.entries(d.colors).forEach(([k,v])=>c[k]&&(c[k].value=v));colors()}
+function mode(on){document.body.classList.toggle('gc-editing',on);els.forEach(e=>e.contentEditable=on);b.edit.style.display=on?'none':'inline-block';b.save.style.display=b.down.style.display=b.cancel.style.display=on?'inline-block':'none'}
+try{const d=localStorage.getItem(K);if(d)restore(JSON.parse(d))}catch(e){}
+b.edit.onclick=()=>mode(true);
+b.save.onclick=()=>{localStorage.setItem(K,JSON.stringify(snap()));mode(false);alert('Alterações salvas neste navegador.')};
+b.cancel.onclick=()=>{try{const d=localStorage.getItem(K);if(d)restore(JSON.parse(d));else{els.forEach((e,i)=>e.innerHTML=original[i]);Object.entries(originalC).forEach(([k,v])=>c[k].value=v);colors()}}catch(e){}mode(false)};
+b.down.onclick=()=>{localStorage.setItem(K,JSON.stringify(snap()));const x=document.documentElement.cloneNode(true);x.querySelector('#gc-editor')?.remove();x.querySelector('#gc-panel')?.remove();x.querySelectorAll('[contenteditable]').forEach(e=>e.removeAttribute('contenteditable'));const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['<!doctype html>\n'+x.outerHTML],{type:'text/html'}));a.download='portfolio_gustavo_costa_editado.html';a.click()};
+})();
 </script>
 </body></html>
